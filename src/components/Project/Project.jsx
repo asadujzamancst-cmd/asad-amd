@@ -3,16 +3,17 @@ import './Project.css';
 
 const Project = () => {
   const [data, setData] = useState([]);
-  const [expandedId, setExpandedId] = useState(null); // Only one expanded at a time
+  const [expandedId, setExpandedId] = useState(null);
 
   useEffect(() => {
     fetch('/Project.json')
       .then(res => res.json())
-      .then(data => setData(data));
+      .then(data => setData(data))
+      .catch(err => console.error('Error loading project data:', err));
   }, []);
 
   const toggleDetails = (id) => {
-    setExpandedId(prevId => (prevId === id ? null : id)); // Toggle or switch
+    setExpandedId(prevId => (prevId === id ? null : id));
   };
 
   return (
@@ -22,8 +23,8 @@ const Project = () => {
           <img src={item.img} alt={item.name} className="card-image" />
           <div className="card-content">
             <h2 className="card-title">{item.title}</h2>
-            <p className="card-name">Name: {item.name}</p>
-            <p className="card-id">ID: {item.id}</p>
+            <p className="card-name"><strong>Name:</strong> {item.name}</p>
+            <p className="card-id"><strong>ID:</strong> {item.id}</p>
             <button className="details-button" onClick={() => toggleDetails(item.id)}>
               {expandedId === item.id ? 'Hide Details' : 'Show Details'}
             </button>

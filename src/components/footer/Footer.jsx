@@ -5,7 +5,7 @@ import logo from '../../assets/facebook.png'
 import togo from '../../assets/instagram.png'
 import jogo from '../../assets/linkedin.png'
 import sogo from '../../assets/social.png'
-import slogo from '../../assets/me.png'
+import slogo from '../../assets/asad.jpg'
 
 
 
@@ -46,7 +46,7 @@ const Footer = () => {
         
         {/* Brand / Logo */}
         <div className="footer-brand">
-          <h2>YourLogo</h2>
+          <h2>AsAd</h2>
           <p>Building the web, one line at a time.</p>
           <div className="social-icons">
             <a href="https://www.facebook.com/profile.php?id=100084847490330"><FaFacebook /></a>

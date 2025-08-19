@@ -1,5 +1,5 @@
 import React from 'react';
-import slogo from '../../assets/me.png'; // Replace with your actual image path
+import slogo from '../../assets/asad.jpg'; // Replace with your actual image path
 import './Home.css'
 
 const Home = () => {
